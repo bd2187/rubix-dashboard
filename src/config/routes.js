@@ -1,17 +1,22 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function Home() {
-    return <h1>Home</h1>;
+function Navigation() {
+    return <p>Navigation</p>;
+}
+
+function Dashboard() {
+    return <h1>Dashboard</h1>;
 }
 
 const routes = (
     <Router>
-        <Fragment>
+        <>
+            <Navigation />
             <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={Dashboard} />
             </Switch>
-        </Fragment>
+        </>
     </Router>
 );
 
