@@ -14,6 +14,9 @@ module.exports = {
             { test: /\.html$/, loader: "html-loader" }
         ]
     },
+    devServer: {
+        historyApiFallback: true
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html"
