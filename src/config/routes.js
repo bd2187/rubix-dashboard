@@ -5,6 +5,14 @@ function Navigation() {
     return <p>Navigation</p>;
 }
 
+function Wrapper(props) {
+    return <div>{props.children}</div>;
+}
+
+function Header() {
+    return <h1>Header</h1>;
+}
+
 function Dashboard() {
     return <h1>Dashboard</h1>;
 }
@@ -100,47 +108,54 @@ function Pricing() {
 const routes = (
     <Router>
         <>
+            <Header />
             <Navigation />
-            <Switch>
-                <Route exact path="/" component={Dashboard} />
-                <Route exact path="/mailbox/:section" component={Mailbox} />
-                <Route exact path="/gallery" component={Gallery} />
-                <Route exact path="/social" component={Social} />
-                <Route exact path="/blog/:section" component={Blog} />
-                <Route exact path="/blog/:section" component={Panels} />
-                <Route exact path="/charts/:section" component={Charts} />
-                <Route exact path="/charts/rubix/:section" component={Charts} />
-                <Route exact path="/timeline" component={Timeline} />
-                <Route
-                    exact
-                    path="/interactive-timeline"
-                    component={InteractiveTimeline}
-                />
-                <Route exact path="/codemirror" component={CodeMirror} />
-                <Route exact path="/editor" component={Editor} />
-                <Route
-                    exact
-                    path="/ui-elements/:section"
-                    component={UIelements}
-                />
-                <Route exact path="/forms/:section" component={Forms} />
-                <Route exact path="/tables/:section" component={Tables} />
-                <Route exact path="/grid" component={Grid} />
-                <Route exact path="/calendar" component={Calendar} />
-                <Route
-                    exact
-                    path="/file-utilities/:section"
-                    component={FileUtilities}
-                />
-                <Route exact path="/fonts" component={Fonts} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/signup" component={Signup} />
-                <Route exact path="/lock" component={Lock} />
-                <Route exact path="/invoice" component={Invoice} />
-                <Route exact path="/pricing" component={Pricing} />
+            <Wrapper>
+                <Switch>
+                    <Route exact path="/" component={Dashboard} />
+                    <Route exact path="/mailbox/:section" component={Mailbox} />
+                    <Route exact path="/gallery" component={Gallery} />
+                    <Route exact path="/social" component={Social} />
+                    <Route exact path="/blog/:section" component={Blog} />
+                    <Route exact path="/blog/:section" component={Panels} />
+                    <Route exact path="/charts/:section" component={Charts} />
+                    <Route
+                        exact
+                        path="/charts/rubix/:section"
+                        component={Charts}
+                    />
+                    <Route exact path="/timeline" component={Timeline} />
+                    <Route
+                        exact
+                        path="/interactive-timeline"
+                        component={InteractiveTimeline}
+                    />
+                    <Route exact path="/codemirror" component={CodeMirror} />
+                    <Route exact path="/editor" component={Editor} />
+                    <Route
+                        exact
+                        path="/ui-elements/:section"
+                        component={UIelements}
+                    />
+                    <Route exact path="/forms/:section" component={Forms} />
+                    <Route exact path="/tables/:section" component={Tables} />
+                    <Route exact path="/grid" component={Grid} />
+                    <Route exact path="/calendar" component={Calendar} />
+                    <Route
+                        exact
+                        path="/file-utilities/:section"
+                        component={FileUtilities}
+                    />
+                    <Route exact path="/fonts" component={Fonts} />
+                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/signup" component={Signup} />
+                    <Route exact path="/lock" component={Lock} />
+                    <Route exact path="/invoice" component={Invoice} />
+                    <Route exact path="/pricing" component={Pricing} />
 
-                {/* Todo add 404 page */}
-            </Switch>
+                    {/* Todo add 404 page */}
+                </Switch>
+            </Wrapper>
         </>
     </Router>
 );
