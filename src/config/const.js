@@ -1,0 +1,7 @@
+export const NAVIGATION_PANELS = {
+    LINKS: "LINKS",
+    SOCIAL: "SOCIAL",
+    STATISTICS: "STATISTICS",
+    FEED: "FEED",
+    ALERTS: "ALERTS"
+};
