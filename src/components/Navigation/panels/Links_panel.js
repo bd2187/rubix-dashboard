@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 function Links_panel() {
-    const [is_mailbox_expanded, expand_mailbox] = useState(false);
-    const [is_blog_expanded, expand_blog] = useState(false);
-    const [is_charts_expanded, expand_charts] = useState(false);
-    const [is_rubix_charts_expanded, expand_rubix_charts] = useState(false);
-    const [is_ui_elements_expanded, expand_ui_elements] = useState(false);
-    const [is_forms_expanded, expand_forms] = useState(false);
-    const [is_tables_expanded, expand_tables] = useState(false);
-    const [is_file_utilities_expanded, expand_file_utilities] = useState(false);
+    const [is_mailbox_expanded, toggle_mailbox] = useState(false);
+    const [is_blog_expanded, toggle_blog] = useState(false);
+    const [is_charts_expanded, toggle_charts] = useState(false);
+    const [is_rubix_charts_expanded, toggle_rubix_charts] = useState(false);
+    const [is_ui_elements_expanded, toggle_ui_elements] = useState(false);
+    const [is_forms_expanded, toggle_forms] = useState(false);
+    const [is_tables_expanded, toggle_tables] = useState(false);
+    const [is_file_utilities_expanded, toggle_file_utilities] = useState(false);
 
     function expand_list(is_expanded, toggle_sublist) {
         toggle_sublist(!is_expanded);
@@ -26,7 +26,7 @@ function Links_panel() {
                     <li>
                         <p
                             onClick={() =>
-                                expand_list(is_mailbox_expanded, expand_mailbox)
+                                expand_list(is_mailbox_expanded, toggle_mailbox)
                             }
                         >
                             Mailbox
@@ -58,7 +58,7 @@ function Links_panel() {
                     <li>
                         <p
                             onClick={() =>
-                                expand_list(is_blog_expanded, expand_blog)
+                                expand_list(is_blog_expanded, toggle_blog)
                             }
                         >
                             Blog
@@ -87,7 +87,7 @@ function Links_panel() {
                     <li>
                         <p
                             onClick={() =>
-                                expand_list(is_charts_expanded, expand_charts)
+                                expand_list(is_charts_expanded, toggle_charts)
                             }
                         >
                             Charts
@@ -100,7 +100,7 @@ function Links_panel() {
                                             onClick={() =>
                                                 expand_list(
                                                     is_rubix_charts_expanded,
-                                                    expand_rubix_charts
+                                                    toggle_rubix_charts
                                                 )
                                             }
                                         >
@@ -177,7 +177,7 @@ function Links_panel() {
                             onClick={() =>
                                 expand_list(
                                     is_ui_elements_expanded,
-                                    expand_ui_elements
+                                    toggle_ui_elements
                                 )
                             }
                         >
@@ -228,7 +228,7 @@ function Links_panel() {
                     <li>
                         <p
                             onClick={() =>
-                                expand_list(is_forms_expanded, expand_forms)
+                                expand_list(is_forms_expanded, toggle_forms)
                             }
                         >
                             Forms
@@ -256,7 +256,7 @@ function Links_panel() {
                     <li>
                         <p
                             onClick={() =>
-                                expand_list(is_tables_expanded, expand_tables)
+                                expand_list(is_tables_expanded, toggle_tables)
                             }
                         >
                             Tables
@@ -294,7 +294,7 @@ function Links_panel() {
                             onClick={() =>
                                 expand_list(
                                     is_file_utilities_expanded,
-                                    expand_file_utilities
+                                    toggle_file_utilities
                                 )
                             }
                         >
