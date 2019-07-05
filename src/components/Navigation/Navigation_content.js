@@ -6,10 +6,6 @@ import Statistics_panel from "./panels/Statistics_panel";
 import Feed_panel from "./panels/Feed_panel";
 import Alerts_panel from "./panels/Alerts_panel";
 
-function Alerts_panel() {
-    return <h1>Alerts</h1>;
-}
-
 function Navigation_content({ panel }) {
     var content = "";
 
