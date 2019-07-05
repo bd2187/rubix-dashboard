@@ -1,9 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-function Navigation() {
-    return <p>Navigation</p>;
-}
+import Navigation from "../components/Navigation/Navigation";
 
 function Wrapper(props) {
     return <div>{props.children}</div>;
