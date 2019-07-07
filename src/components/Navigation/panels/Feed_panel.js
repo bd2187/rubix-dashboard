@@ -1,22 +1,6 @@
 import React from "react";
+import Panel_header from "./Panel_header";
 import { feed } from "../../../config/sample-data";
-import { format_date } from "../../../config/utils";
-
-function Feed_notification({ feed_data, friend }) {
-    return (
-        <div>
-            {friend ? (
-                <div>
-                    <img src={`/avatar_${friend.id}`} />
-                    <h2>{friend.display_name}</h2>
-                </div>
-            ) : null}
-
-            <p>{format_date(feed_data.timestamp)}</p>
-            <p>{feed_data.message}</p>
-        </div>
-    );
-}
 
 function Feed_panel() {
     var feed_markup = [];
@@ -29,7 +13,7 @@ function Feed_panel() {
         if (type === "friend_request") {
             markup = (
                 <li key={id}>
-                    <Feed_notification feed_data={feed_data} friend={friend} />
+                    <Panel_header feed_data={feed_data} friend={friend} />
                     <div>
                         <div>
                             <button>Accept</button>
@@ -41,7 +25,7 @@ function Feed_panel() {
         } else if (type === "check_in") {
             markup = (
                 <li key={id}>
-                    <Feed_notification feed_data={feed_data} friend={friend} />
+                    <Panel_header feed_data={feed_data} friend={friend} />
                     <div>
                         {/* location */}
                         <p>map placeholder</p>
@@ -51,7 +35,7 @@ function Feed_panel() {
         } else if (type === "self_status") {
             markup = (
                 <li key={id}>
-                    <Feed_notification feed_data={feed_data} friend={friend} />
+                    <Panel_header feed_data={feed_data} friend={friend} />
                     {image ? (
                         <div>
                             <img src={image} />
@@ -62,7 +46,7 @@ function Feed_panel() {
         } else {
             markup = (
                 <li key={id}>
-                    <Feed_notification feed_data={feed_data} friend={friend} />
+                    <Panel_header feed_data={feed_data} friend={friend} />
                 </li>
             );
         }
