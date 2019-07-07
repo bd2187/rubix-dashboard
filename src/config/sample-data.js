@@ -134,3 +134,51 @@ export const feed = [
         id: "b0al12j48fpz"
     }
 ];
+
+export const alerts = [
+    {
+        type: "system_wide",
+        timestamp: 1565593200000,
+        message: "Spike in network traffic detected.",
+        allow_user_action: false,
+        chart: {
+            status: true,
+            type: "bar",
+            data: []
+        },
+        id: "dj18alpqoe9v"
+    },
+    {
+        type: "system_wide",
+        timestamp: 1565420400000,
+        message: "Node 1 down for 30 minutes! Take action!",
+        allow_user_action: true,
+        chart: {
+            status: false
+        },
+        id: "dq1aavpboed9"
+    },
+    {
+        type: "node",
+        timestamp: 1565593200000,
+        message: "CPU running at 100% on Node 1.",
+        allow_user_action: false,
+        chart: {
+            status: false
+        },
+        id: "ajsssl4qoe2p"
+    },
+    {
+        type: "node",
+        timestamp: 1565420400000,
+        message:
+            "Running out of disk space on Node 2, Node 3, Node 5 and Node 7",
+        allow_user_action: false,
+        chart: {
+            status: true,
+            type: "pie",
+            data: []
+        },
+        id: "da1dalvqoe1v"
+    }
+];
