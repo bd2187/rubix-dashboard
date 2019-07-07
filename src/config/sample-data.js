@@ -84,3 +84,53 @@ export const friends = [
         id: "014"
     }
 ];
+
+export const feed = [
+    {
+        type: "friend_request",
+        timestamp: 1565420400000,
+        friend: {
+            name: "jordyn-ouellet",
+            display_name: "Jordyn Ouellet",
+            id: "001"
+        },
+        message: "Sent you a friend request",
+        id: "192djwui19s"
+    },
+
+    {
+        type: "check_in",
+        timestamp: 1565334000000,
+        friend: "Toby King",
+        friend: {
+            name: "toby-king",
+            display_name: "Toby king",
+            id: "005"
+        },
+        message:
+            "Visiting The Museum of Modern Art at 11 W 53rd St, New York, NY 10019",
+        location: "",
+        id: "sj3829sj120s"
+    },
+
+    {
+        type: "self_status",
+        timestamp: 1565247600000,
+        friend: "",
+        message: "Driving through! :)",
+        image: "",
+        id: "ls012mza0915"
+    },
+
+    {
+        type: "message",
+        timestamp: 1565247600000,
+        friend: {
+            name: "angelina-mills",
+            display_name: "Angelina Mills",
+            id: "003"
+        },
+        message: "Hey you free tomorrow? Lets go shopping!",
+        id: "b0al12j48fpz"
+    }
+];
