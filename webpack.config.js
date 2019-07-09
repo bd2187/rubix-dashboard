@@ -11,7 +11,11 @@ module.exports = {
     module: {
         rules: [
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
-            { test: /\.html$/, loader: "html-loader" }
+            { test: /\.html$/, loader: "html-loader" },
+            {
+                test: /\.css$/,
+                loader: ["style-loader", "css-loader"]
+            }
         ]
     },
     devServer: {
