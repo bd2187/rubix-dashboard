@@ -1,13 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from "../components/Navigation/Navigation";
+import Header from "../components/Header/Header";
 
 function Wrapper(props) {
     return <div>{props.children}</div>;
-}
-
-function Header() {
-    return <h1>Header</h1>;
 }
 
 function Dashboard() {
