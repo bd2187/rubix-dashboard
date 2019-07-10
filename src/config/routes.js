@@ -1,11 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navigation from "../components/Navigation/Navigation";
 import Header from "../components/Header/Header";
-
-function Wrapper(props) {
-    return <div>{props.children}</div>;
-}
+import Wrapper from "../components/Wrapper/Wrapper";
 
 function Dashboard() {
     return <h1>Dashboard</h1>;
@@ -103,7 +99,6 @@ const routes = (
     <Router>
         <>
             <Header />
-            <Navigation />
             <Wrapper>
                 <Switch>
                     <Route exact path="/" component={Dashboard} />
