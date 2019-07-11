@@ -1,6 +1,8 @@
 import React from "react";
 import { NAVIGATION_PANELS } from "../../config/const";
 import { Link } from "react-router-dom";
+import { Navigation_header_div } from "./Navigation_styles";
+
 function Navigation_panels_menu({ change_panel }) {
     return (
         <ul className="navigation-panels-menu">
@@ -21,17 +23,23 @@ function Navigation_panels_menu({ change_panel }) {
 
 function Navigation_header({ change_panel }) {
     return (
-        <div className="navigation-header">
-            <div className="navigation-header__profile">
-                <div className="navigation-header__profile-picture" />
-                <div className="navigation-header__profile-info">
-                    <h1>Obi Wan</h1>
-                    <div className="navigation-header__status-bar" />
+        <Navigation_header_div>
+            <div className="navigation-profile-container">
+                <div className="navigation-profile-container__profile-photo" />
+                <div className="profile-info">
+                    <div className="profile-content">
+                        <h1>Obi Wan</h1>
+                        <div className="profile-progress-bar">
+                            <div className="profile-progress-bar__progress" />
+                        </div>
+                    </div>
                 </div>
-                <Link to="/lock">Lock</Link>
+                <Link to="/lock">
+                    <i className="fas fa-lock" />
+                </Link>
             </div>
             <Navigation_panels_menu change_panel={change_panel} />
-        </div>
+        </Navigation_header_div>
     );
 }
 
