@@ -1,21 +1,9 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { App_context } from "../../contexts/app-context";
 import Navigation_header from "./Navigation_header";
 import Navigation_content from "./Navigation_content";
+import { Navigation_div } from "./Navigation_styles";
 import { NAVIGATION_PANELS } from "../../config/const";
-
-const Navigation_div = styled.div`
-    position: fixed;
-    top: 0;
-    left: ${({ is_nav_open }) => {
-        return is_nav_open ? "0" : "-200px";
-    }};
-    width: 200px;
-    background-color: red;
-
-    transition: left 0.5s ease-in-out;
-`;
 
 function Navigation() {
     const [panel, change_panel] = useState(NAVIGATION_PANELS.LINKS);
