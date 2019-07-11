@@ -1,14 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { App_context } from "../../contexts/app-context";
-
-const Wrapper_div = styled.div`
-    background: orange;
-    position: relative;
-    left: ${({ is_nav_open }) => (is_nav_open ? "200px" : "0")};
-    transition: left 0.5s ease-in-out;
-    margin-top: 75px;
-`;
+import { Wrapper_div } from "./Wrapper_styles";
 
 function Wrapper(props) {
     return (
