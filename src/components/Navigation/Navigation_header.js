@@ -1,27 +1,63 @@
 import React from "react";
 import { NAVIGATION_PANELS } from "../../config/const";
 import { Link } from "react-router-dom";
-import { Navigation_header_div } from "./Navigation_styles";
+import {
+    Navigation_header_div,
+    Navigation_panels_menu_ul
+} from "./Navigation_styles";
 
-function Navigation_panels_menu({ change_panel }) {
+function Navigation_panels_menu({ panel, change_panel }) {
+    const { LINKS, SOCIAL, STATISTICS, FEED, ALERTS } = NAVIGATION_PANELS;
+
     return (
-        <ul className="navigation-panels-menu">
-            <li onClick={() => change_panel(NAVIGATION_PANELS.LINKS)}>links</li>
-            <li onClick={() => change_panel(NAVIGATION_PANELS.SOCIAL)}>
-                social
+        <Navigation_panels_menu_ul>
+            <li
+                className={`navigation-panel-option ${
+                    panel === LINKS ? "navigation-panel-option--selected" : ""
+                }`}
+                onClick={() => change_panel(LINKS)}
+            >
+                <i className="fas fa-link" />
             </li>
-            <li onClick={() => change_panel(NAVIGATION_PANELS.STATISTICS)}>
-                statistics
+            <li
+                className={`navigation-panel-option ${
+                    panel === SOCIAL ? "navigation-panel-option--selected" : ""
+                }`}
+                onClick={() => change_panel(SOCIAL)}
+            >
+                <i className="fas fa-comments" />
             </li>
-            <li onClick={() => change_panel(NAVIGATION_PANELS.FEED)}>feed</li>
-            <li onClick={() => change_panel(NAVIGATION_PANELS.ALERTS)}>
-                alerts
+            <li
+                className={`navigation-panel-option ${
+                    panel === STATISTICS
+                        ? "navigation-panel-option--selected"
+                        : ""
+                }`}
+                onClick={() => change_panel(STATISTICS)}
+            >
+                <i className="fas fa-chart-pie" />
             </li>
-        </ul>
+            <li
+                className={`navigation-panel-option ${
+                    panel === FEED ? "navigation-panel-option--selected" : ""
+                }`}
+                onClick={() => change_panel(FEED)}
+            >
+                <i className="fas fa-list" />
+            </li>
+            <li
+                className={`navigation-panel-option ${
+                    panel === ALERTS ? "navigation-panel-option--selected" : ""
+                }`}
+                onClick={() => change_panel(ALERTS)}
+            >
+                <i className="fas fa-bell" />
+            </li>
+        </Navigation_panels_menu_ul>
     );
 }
 
-function Navigation_header({ change_panel }) {
+function Navigation_header({ panel, change_panel }) {
     return (
         <Navigation_header_div>
             <div className="navigation-profile-container">
@@ -35,10 +71,10 @@ function Navigation_header({ change_panel }) {
                     </div>
                 </div>
                 <Link to="/lock">
-                    <i className="fas fa-lock" />
+                    <i className="fas fa-lock navigation-profile-container__lock" />
                 </Link>
             </div>
-            <Navigation_panels_menu change_panel={change_panel} />
+            <Navigation_panels_menu panel={panel} change_panel={change_panel} />
         </Navigation_header_div>
     );
 }
