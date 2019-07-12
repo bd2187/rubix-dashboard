@@ -7,12 +7,16 @@ import { NAVIGATION_PANELS } from "../../config/const";
 
 function Navigation() {
     const [panel, change_panel] = useState(NAVIGATION_PANELS.LINKS);
+
     return (
         <App_context.Consumer>
             {function({ is_nav_open }) {
                 return (
                     <Navigation_div is_nav_open={is_nav_open}>
-                        <Navigation_header change_panel={change_panel} />
+                        <Navigation_header
+                            panel={panel}
+                            change_panel={change_panel}
+                        />
                         <Navigation_content panel={panel} />
                     </Navigation_div>
                 );
