@@ -1,32 +1,7 @@
 import React from "react";
 import { App_context } from "../../contexts/app-context";
 import Navigation from "../Navigation/Navigation";
-import styled from "styled-components";
-
-const Head = styled.div`
-    background-color: blue;
-    position: fixed;
-    top: 0;
-    left: ${({ is_nav_open }) => (is_nav_open ? "200px" : "0")}
-    height: 75px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;    
-    transition: left 0.5s ease-in-out;
-`;
-
-const Hamburger_menu = styled.div`
-    width: 79px;
-    height: 75px;
-    background: gold;
-`;
-
-const Power = styled.div`
-    width: 79px;
-    height: 75px;
-    background: gold;
-`;
+import { Head, Hamburger_menu_div, Power } from "./Header_styles";
 
 function Header() {
     return (
@@ -35,9 +10,18 @@ function Header() {
                 return (
                     <>
                         <Head is_nav_open={is_nav_open}>
-                            <Hamburger_menu onClick={toggle_nav} />
+                            <Hamburger_menu_div onClick={toggle_nav}>
+                                <div className="hamburger-lines">
+                                    <div className="hamburger-lines__line" />
+                                    <div className="hamburger-lines__line" />
+                                    <div className="hamburger-lines__line" />
+                                    <div className="hamburger-lines__line" />
+                                </div>
+                            </Hamburger_menu_div>
                             <h1>rubix</h1>
-                            <Power />
+                            <Power>
+                                <i className="fas fa-power-off" />
+                            </Power>
                         </Head>
                         <Navigation />
                     </>
