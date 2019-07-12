@@ -1,6 +1,5 @@
 import React from "react";
 import { App_context } from "../../contexts/app-context";
-import Navigation from "../Navigation/Navigation";
 import { Head, Hamburger_menu_div, Power } from "./Header_styles";
 
 function Header() {
@@ -23,7 +22,6 @@ function Header() {
                                 <i className="fas fa-power-off" />
                             </Power>
                         </Head>
-                        <Navigation />
                     </>
                 );
             }}
