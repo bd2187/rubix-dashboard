@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../components/Header/Header";
+import Navigation from "../components/Navigation/Navigation";
 import Wrapper from "../components/Wrapper/Wrapper";
 
 function Dashboard() {
@@ -99,6 +100,7 @@ const routes = (
     <Router>
         <>
             <Header />
+            <Navigation />
             <Wrapper>
                 <Switch>
                     <Route exact path="/" component={Dashboard} />
