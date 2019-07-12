@@ -31,6 +31,9 @@ export const Header_flanks = styled.div`
 
 export const Hamburger_menu_div = styled(Header_flanks)`
     background: #48a38b;
+    :hover {
+        background-color: #50b498;
+    }
 
     .hamburger-lines {
         width: 30px;
@@ -46,5 +49,9 @@ export const Hamburger_menu_div = styled(Header_flanks)`
 
 export const Power = styled(Header_flanks)`
     background: #f25d50;
+    :hover {
+        background-color: #ef644c;
+    }
+
     font-size: 32px;
 `;
