@@ -3,7 +3,7 @@ import { Nav_transition, pixels_to_move } from "../common/styled-components";
 
 const nav_header_font_color = `rgba(0, 0, 0, 0.2)`;
 
-export const Navigation_div = styled(Nav_transition)`
+export const Navigation_container_div = styled(Nav_transition)`
     position: fixed;
     top: 0;
     left: ${({ is_nav_open }) => {
@@ -12,11 +12,16 @@ export const Navigation_div = styled(Nav_transition)`
     width: ${pixels_to_move};
     height: 100%;
     background-color: #273135;
-    color: rgba(125, 136, 142, 0.7);
+
+    display: flex;
+    flex-direction: column;
+`;
+
+export const Navigation_div = styled(Nav_transition)`
     overflow-y: scroll;
 `;
 
-export const Navigation_header_div = styled.div`
+export const Navigation_header_div = styled(Nav_transition)`
     .navigation-profile-container {
         color: #fff;
         background: #fa7252;
