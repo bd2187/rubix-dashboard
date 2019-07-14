@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Panels_container_div, Links_category_div } from "./Panels_styles.js";
+
 function Links_panel() {
     const [is_mailbox_expanded, toggle_mailbox] = useState(false);
     const [is_blog_expanded, toggle_blog] = useState(false);
@@ -15,32 +17,41 @@ function Links_panel() {
     }
 
     return (
-        <div className="links-panel">
-            <input type="text" placeholder="Search..." />
-            <div className="links-panel__section">
-                <h4>Pages</h4>
-                <ul>
-                    <li>
-                        <Link to="/">Dashboard</Link>
+        <Panels_container_div className="links-panel">
+            <input
+                className="links-panel__search"
+                type="text"
+                placeholder="Search..."
+            />
+
+            <Links_category_div className="links-category">
+                <h4 className="links-category__title">PAGES</h4>
+                <ul className="links-category-list">
+                    <li className="links-category-list__item">
+                        <Link to="/">
+                            <i className="fas fa-tachometer-alt links-category__icon" />
+                            Dashboard
+                        </Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <p
                             onClick={() =>
                                 expand_list(is_mailbox_expanded, toggle_mailbox)
                             }
                         >
+                            <i className="fas fa-envelope links-category__icon" />
                             Mailbox
                         </p>
                         <ul>
                             {is_mailbox_expanded ? (
                                 <>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/mailbox/inbox">Inbox</Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/mailbox/mail">Mail</Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/mailbox/compose">
                                             Compose
                                         </Link>
@@ -49,13 +60,19 @@ function Links_panel() {
                             ) : null}
                         </ul>
                     </li>
-                    <li>
-                        <Link to="/gallery">Gallery</Link>
+                    <li className="links-category-list__item">
+                        <Link to="/gallery">
+                            <i className="fas fa-images links-category__icon" />
+                            Gallery
+                        </Link>
                     </li>
-                    <li>
-                        <Link to="/social">Social</Link>
+                    <li className="links-category-list__item">
+                        <Link to="/social">
+                            <i className="fas fa-share-alt links-category__icon" />
+                            Social
+                        </Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <p
                             onClick={() =>
                                 expand_list(is_blog_expanded, toggle_blog)
@@ -66,10 +83,10 @@ function Links_panel() {
                         <ul>
                             {is_blog_expanded ? (
                                 <>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/blog/posts">Posts</Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/blog/post">Single Post</Link>
                                     </li>
                                 </>
@@ -77,14 +94,15 @@ function Links_panel() {
                         </ul>
                     </li>
                 </ul>
-            </div>
-            <div className="links-panel__section">
-                <h4>Components</h4>
-                <ul>
-                    <li>
+            </Links_category_div>
+
+            <Links_category_div className="links-category">
+                <h4 className="links-category__title">COMPONENTS</h4>
+                <ul className="links-category-list">
+                    <li className="links-category-list__item">
                         <Link to="/panels">Panels</Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <p
                             onClick={() =>
                                 expand_list(is_charts_expanded, toggle_charts)
@@ -95,7 +113,7 @@ function Links_panel() {
                         <ul>
                             {is_charts_expanded ? (
                                 <>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <p
                                             onClick={() =>
                                                 expand_list(
@@ -109,27 +127,27 @@ function Links_panel() {
                                         <ul>
                                             {is_rubix_charts_expanded ? (
                                                 <>
-                                                    <li>
+                                                    <li className="links-category-list__item">
                                                         <Link to="/charts/rubix/line">
                                                             Line Series
                                                         </Link>
                                                     </li>
-                                                    <li>
+                                                    <li className="links-category-list__item">
                                                         <Link to="/charts/rubix/area">
                                                             Area Series
                                                         </Link>
                                                     </li>
-                                                    <li>
+                                                    <li className="links-category-list__item">
                                                         <Link to="/charts/rubix/barcol">
                                                             Bar + Column Series
                                                         </Link>
                                                     </li>
-                                                    <li>
+                                                    <li className="links-category-list__item">
                                                         <Link to="/charts/rubix/mixed">
                                                             Mixed Series
                                                         </Link>
                                                     </li>
-                                                    <li>
+                                                    <li className="links-category-list__item">
                                                         <Link to="/charts/rubix/piedonut">
                                                             Pie + Donut Series
                                                         </Link>
@@ -138,15 +156,15 @@ function Links_panel() {
                                             ) : null}
                                         </ul>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/charts/chartsjs">
                                             Charts.JS
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/charts/c3js">C3.JS</Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/charts/morrisjs">
                                             Morris.JS
                                         </Link>
@@ -155,24 +173,24 @@ function Links_panel() {
                             ) : null}
                         </ul>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <Link to="/timeline">Static Timeline</Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <Link to="/interactive-timeline">
                             Interactive Timeline
                         </Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <Link to="/codemirror">Codemirror</Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <Link to="/maps">Maps</Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <Link to="/editor">Editor</Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <p
                             onClick={() =>
                                 expand_list(
@@ -186,37 +204,37 @@ function Links_panel() {
                         <ul>
                             {is_ui_elements_expanded ? (
                                 <>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/ui-elements/buttons">
                                             Inbox
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/ui-elements/dropdowns">
                                             Mail
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/ui-elements/tabs-and-navs">
                                             Tabs & Navs
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/ui-elements/sliders">
                                             Sliders
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/ui-elements/knobs">
                                             Knobs
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/ui-elements/modals">
                                             Modals
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/ui-elements/messenger">
                                             Messenger
                                         </Link>
@@ -225,7 +243,7 @@ function Links_panel() {
                             ) : null}
                         </ul>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <p
                             onClick={() =>
                                 expand_list(is_forms_expanded, toggle_forms)
@@ -236,24 +254,24 @@ function Links_panel() {
                         <ul>
                             {is_forms_expanded ? (
                                 <>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/forms/controls">
                                             Controls
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/forms/x-editables">
                                             Mail
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/forms/wizard">Wizard</Link>
                                     </li>
                                 </>
                             ) : null}
                         </ul>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <p
                             onClick={() =>
                                 expand_list(is_tables_expanded, toggle_tables)
@@ -264,17 +282,17 @@ function Links_panel() {
                         <ul>
                             {is_tables_expanded ? (
                                 <>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/tables/bootstrap-tables">
                                             Bootstrap Tables
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/tables/datatables">
                                             Datatables
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/tables/tablesaw">
                                             Tablesaw
                                         </Link>
@@ -283,13 +301,13 @@ function Links_panel() {
                             ) : null}
                         </ul>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <Link to="/grid">Grid</Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <Link to="/calendar">Calendar</Link>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <p
                             onClick={() =>
                                 expand_list(
@@ -303,12 +321,12 @@ function Links_panel() {
                         <ul>
                             {is_file_utilities_expanded ? (
                                 <>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/file-utilities/dropzone">
                                             Bootstrap Tables
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="links-category-list__item">
                                         <Link to="/file-utilities/image-cropping">
                                             Image Cropping
                                         </Link>
@@ -317,12 +335,12 @@ function Links_panel() {
                             ) : null}
                         </ul>
                     </li>
-                    <li>
+                    <li className="links-category-list__item">
                         <Link to="/fonts">Fonts</Link>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </Links_category_div>
+        </Panels_container_div>
     );
 }
 
