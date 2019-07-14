@@ -1,4 +1,5 @@
 import React from "react";
+import { App_context } from "../../contexts/app-context";
 import { NAVIGATION_PANELS } from "../../config/const";
 import { Link } from "react-router-dom";
 import {
@@ -59,23 +60,32 @@ function Navigation_panels_menu({ panel, change_panel }) {
 
 function Navigation_header({ panel, change_panel }) {
     return (
-        <Navigation_header_div>
-            <div className="navigation-profile-container">
-                <div className="navigation-profile-container__profile-photo" />
-                <div className="profile-info">
-                    <div className="profile-content">
-                        <h1>Obi Wan</h1>
-                        <div className="profile-progress-bar">
-                            <div className="profile-progress-bar__progress" />
+        <App_context.Consumer>
+            {function({ is_nav_open }) {
+                return (
+                    <Navigation_header_div is_nav_open={is_nav_open}>
+                        <div className="navigation-profile-container">
+                            <div className="navigation-profile-container__profile-photo" />
+                            <div className="profile-info">
+                                <div className="profile-content">
+                                    <h1>Obi Wan</h1>
+                                    <div className="profile-progress-bar">
+                                        <div className="profile-progress-bar__progress" />
+                                    </div>
+                                </div>
+                            </div>
+                            <Link to="/lock">
+                                <i className="fas fa-lock navigation-profile-container__lock" />
+                            </Link>
                         </div>
-                    </div>
-                </div>
-                <Link to="/lock">
-                    <i className="fas fa-lock navigation-profile-container__lock" />
-                </Link>
-            </div>
-            <Navigation_panels_menu panel={panel} change_panel={change_panel} />
-        </Navigation_header_div>
+                        <Navigation_panels_menu
+                            panel={panel}
+                            change_panel={change_panel}
+                        />
+                    </Navigation_header_div>
+                );
+            }}
+        </App_context.Consumer>
     );
 }
 
