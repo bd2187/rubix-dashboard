@@ -34,26 +34,54 @@ function Links_panel() {
                         </Link>
                     </li>
                     <li className="links-category-list__item">
-                        <p
+                        <div
                             onClick={() =>
                                 expand_list(is_mailbox_expanded, toggle_mailbox)
                             }
+                            className="links-category-toggle"
                         >
-                            <i className="fas fa-envelope links-category__icon" />
-                            Mailbox
-                        </p>
-                        <ul>
+                            <div className="links-category-toggle__inner-container">
+                                <i className="fas fa-envelope links-category__icon" />
+                                <p className="links-category-toggle__text">
+                                    Mailbox
+                                </p>
+                            </div>
+                            <i
+                                className={`fas fa-chevron-left ${
+                                    is_mailbox_expanded
+                                        ? "fa-chevron-left--open"
+                                        : ""
+                                } `}
+                            />
+                        </div>
+                        <ul className="sub-links-container">
                             {is_mailbox_expanded ? (
                                 <>
                                     <li className="links-category-list__item">
-                                        <Link to="/mailbox/inbox">Inbox</Link>
+                                        <Link to="/mailbox/inbox">
+                                            <div className="sub-links-container__link-content">
+                                                <div className="sub-links-container__pointer" />
+                                                <i className="fas fa-inbox links-category__icon" />
+                                                Inbox
+                                            </div>
+                                        </Link>
                                     </li>
                                     <li className="links-category-list__item">
-                                        <Link to="/mailbox/mail">Mail</Link>
+                                        <Link to="/mailbox/mail">
+                                            <div className="sub-links-container__link-content">
+                                                <div className="sub-links-container__pointer" />
+                                                <i className="fas fa-envelope-open-text links-category__icon" />
+                                                Mail
+                                            </div>
+                                        </Link>
                                     </li>
                                     <li className="links-category-list__item">
                                         <Link to="/mailbox/compose">
-                                            Compose
+                                            <div className="sub-links-container__link-content">
+                                                <div className="sub-links-container__pointer" />
+                                                <i className="fas fa-comment-alt links-category__icon" />
+                                                Compose
+                                            </div>
                                         </Link>
                                     </li>
                                 </>
@@ -78,6 +106,7 @@ function Links_panel() {
                                 expand_list(is_blog_expanded, toggle_blog)
                             }
                         >
+                            <i className="fas fa-th links-category__icon" />
                             Blog
                         </p>
                         <ul>
@@ -100,7 +129,10 @@ function Links_panel() {
                 <h4 className="links-category__title">COMPONENTS</h4>
                 <ul className="links-category-list">
                     <li className="links-category-list__item">
-                        <Link to="/panels">Panels</Link>
+                        <Link to="/panels">
+                            <i className="fas fa-layer-group links-category__icon" />
+                            Panels
+                        </Link>
                     </li>
                     <li className="links-category-list__item">
                         <p
@@ -108,6 +140,7 @@ function Links_panel() {
                                 expand_list(is_charts_expanded, toggle_charts)
                             }
                         >
+                            <i className="far fa-chart-bar links-category__icon" />
                             Charts
                         </p>
                         <ul>
@@ -174,21 +207,34 @@ function Links_panel() {
                         </ul>
                     </li>
                     <li className="links-category-list__item">
-                        <Link to="/timeline">Static Timeline</Link>
+                        <Link to="/timeline">
+                            <i className="far fa-clock links-category__icon" />
+                            Static Timeline
+                        </Link>
                     </li>
                     <li className="links-category-list__item">
                         <Link to="/interactive-timeline">
+                            <i className="fas fa-history links-category__icon" />
                             Interactive Timeline
                         </Link>
                     </li>
                     <li className="links-category-list__item">
-                        <Link to="/codemirror">Codemirror</Link>
+                        <Link to="/codemirror">
+                            <i className="fas fa-code links-category__icon" />
+                            Codemirror
+                        </Link>
                     </li>
                     <li className="links-category-list__item">
-                        <Link to="/maps">Maps</Link>
+                        <Link to="/maps">
+                            <i className="fas fa-map-marker-alt links-category__icon" />
+                            Maps
+                        </Link>
                     </li>
                     <li className="links-category-list__item">
-                        <Link to="/editor">Editor</Link>
+                        <Link to="/editor">
+                            <i className="fas fa-edit links-category__icon" />
+                            Editor
+                        </Link>
                     </li>
                     <li className="links-category-list__item">
                         <p
@@ -199,6 +245,7 @@ function Links_panel() {
                                 )
                             }
                         >
+                            <i className="fas fa-toggle-on links-category__icon" />
                             UI Elements
                         </p>
                         <ul>
@@ -249,6 +296,7 @@ function Links_panel() {
                                 expand_list(is_forms_expanded, toggle_forms)
                             }
                         >
+                            <i className="fas fa-align-left links-category__icon" />
                             Forms
                         </p>
                         <ul>
@@ -277,6 +325,7 @@ function Links_panel() {
                                 expand_list(is_tables_expanded, toggle_tables)
                             }
                         >
+                            <i className="fas fa-table links-category__icon" />
                             Tables
                         </p>
                         <ul>
@@ -302,10 +351,16 @@ function Links_panel() {
                         </ul>
                     </li>
                     <li className="links-category-list__item">
-                        <Link to="/grid">Grid</Link>
+                        <Link to="/grid">
+                            <i className="fas fa-border-all links-category__icon" />
+                            Grid
+                        </Link>
                     </li>
                     <li className="links-category-list__item">
-                        <Link to="/calendar">Calendar</Link>
+                        <Link to="/calendar">
+                            <i className="fas fa-calendar-alt links-category__icon" />
+                            Calendar
+                        </Link>
                     </li>
                     <li className="links-category-list__item">
                         <p
@@ -316,6 +371,7 @@ function Links_panel() {
                                 )
                             }
                         >
+                            <i className="fas fa-folder-open links-category__icon" />
                             File Utilities
                         </p>
                         <ul>
@@ -336,7 +392,10 @@ function Links_panel() {
                         </ul>
                     </li>
                     <li className="links-category-list__item">
-                        <Link to="/fonts">Fonts</Link>
+                        <Link to="/fonts">
+                            <i className="fas fa-font links-category__icon" />
+                            Fonts
+                        </Link>
                     </li>
                 </ul>
             </Links_category_div>
