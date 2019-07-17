@@ -54,38 +54,40 @@ function Links_panel() {
                                 } `}
                             />
                         </div>
-                        <ul className="sub-links-container">
-                            {is_mailbox_expanded ? (
-                                <>
-                                    <li className="links-category-list__item">
-                                        <Link to="/mailbox/inbox">
-                                            <div className="sub-links-container__link-content">
-                                                <div className="sub-links-container__pointer" />
-                                                <i className="fas fa-inbox links-category__icon" />
-                                                Inbox
-                                            </div>
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/mailbox/mail">
-                                            <div className="sub-links-container__link-content">
-                                                <div className="sub-links-container__pointer" />
-                                                <i className="fas fa-envelope-open-text links-category__icon" />
-                                                Mail
-                                            </div>
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/mailbox/compose">
-                                            <div className="sub-links-container__link-content">
-                                                <div className="sub-links-container__pointer" />
-                                                <i className="fas fa-comment-alt links-category__icon" />
-                                                Compose
-                                            </div>
-                                        </Link>
-                                    </li>
-                                </>
-                            ) : null}
+                        <ul
+                            className={`sub-links-container ${
+                                is_mailbox_expanded
+                                    ? "sub-links-container--open"
+                                    : "sub-links-container--closed"
+                            }`}
+                        >
+                            <li className="links-category-list__item">
+                                <Link to="/mailbox/inbox">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-inbox links-category__icon" />
+                                        Inbox
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className="links-category-list__item">
+                                <Link to="/mailbox/mail">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-envelope-open-text links-category__icon" />
+                                        Mail
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className="links-category-list__item">
+                                <Link to="/mailbox/compose">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-comment-alt links-category__icon" />
+                                        Compose
+                                    </div>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className="links-category-list__item">
