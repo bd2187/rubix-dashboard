@@ -71,8 +71,9 @@ export const Links_category_div = styled.div`
     }
 
     .sub-links-container {
-        border-left: 3px solid red;
-        margin: 10px 0;
+        border-left: 2px solid rgba(59, 70, 72, 0.5);
+        overflow: hidden;
+        font-size: 15px;
 
         .sub-links-container__link-content {
             display: flex;
@@ -81,9 +82,41 @@ export const Links_category_div = styled.div`
 
         .sub-links-container__pointer {
             width: 15px;
-            height: 3px;
+            height: 2px;
             margin-right: 15px;
-            background: red;
+            background: rgba(59, 70, 72, 0.5);
+        }
+    }
+
+    .sub-links-container--open {
+        animation: open-sublist 1s cubic-bezier(0.69, 1.67, 0, 0.81);
+        margin: 10px 0;
+        @keyframes open-sublist {
+            0% {
+                height: 0px;
+            }
+
+            50% {
+                // todo
+                height: auto;
+            }
+        }
+    }
+
+    .sub-links-container--closed {
+        animation: close-sublist 1s cubic-bezier(0.69, 1.67, 0, 0.81);
+
+        height: 0px;
+
+        @keyframes close-sublist {
+            0% {
+                // todo
+                height: auto;
+            }
+
+            50% {
+                height: 0px;
+            }
         }
     }
 `;
