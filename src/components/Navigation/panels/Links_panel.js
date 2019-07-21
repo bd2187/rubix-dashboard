@@ -103,25 +103,52 @@ function Links_panel() {
                         </Link>
                     </li>
                     <li className="links-category-list__item">
-                        <p
+                        <div
                             onClick={() =>
                                 expand_list(is_blog_expanded, toggle_blog)
                             }
+                            className="links-category-toggle"
                         >
-                            <i className="fas fa-th links-category__icon" />
-                            Blog
-                        </p>
-                        <ul>
-                            {is_blog_expanded ? (
-                                <>
-                                    <li className="links-category-list__item">
-                                        <Link to="/blog/posts">Posts</Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/blog/post">Single Post</Link>
-                                    </li>
-                                </>
-                            ) : null}
+                            <div className="links-category-toggle__inner-container">
+                                <i className="fas fa-th links-category__icon" />
+                                <p className="links-category-toggle__text">
+                                    Blog
+                                </p>
+                            </div>
+                            <i
+                                className={`fas fa-chevron-left ${
+                                    is_blog_expanded
+                                        ? "fa-chevron-left--open"
+                                        : ""
+                                } `}
+                            />
+                        </div>
+
+                        <ul
+                            className={`sub-links-container ${
+                                is_blog_expanded
+                                    ? "sub-links-container--open"
+                                    : "sub-links-container--closed"
+                            }`}
+                        >
+                            <li className="links-category-list__item">
+                                <Link to="/blog/posts">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Posts
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className="links-category-list__item">
+                                <Link to="/blog/post">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-sticky-note links-category__icon" />
+                                        Single Post
+                                    </div>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -137,75 +164,151 @@ function Links_panel() {
                         </Link>
                     </li>
                     <li className="links-category-list__item">
-                        <p
+                        <div
                             onClick={() =>
                                 expand_list(is_charts_expanded, toggle_charts)
                             }
+                            className="links-category-toggle"
                         >
-                            <i className="far fa-chart-bar links-category__icon" />
-                            Charts
-                        </p>
-                        <ul>
-                            {is_charts_expanded ? (
-                                <>
-                                    <li className="links-category-list__item">
-                                        <p
-                                            onClick={() =>
-                                                expand_list(
-                                                    is_rubix_charts_expanded,
-                                                    toggle_rubix_charts
-                                                )
-                                            }
-                                        >
+                            <div className="links-category-toggle__inner-container">
+                                <i className="fas fa-chart-bar links-category__icon" />
+                                <p className="links-category-toggle__text">
+                                    Charts
+                                </p>
+                            </div>
+                            <i
+                                className={`fas fa-chevron-left ${
+                                    is_charts_expanded
+                                        ? "fa-chevron-left--open"
+                                        : ""
+                                } `}
+                            />
+                        </div>
+
+                        <ul
+                            className={`sub-links-container ${
+                                is_charts_expanded
+                                    ? "sub-links-container--open"
+                                    : "sub-links-container--closed"
+                            }`}
+                        >
+                            <li className="links-category-list__item">
+                                <div
+                                    onClick={() =>
+                                        expand_list(
+                                            is_rubix_charts_expanded,
+                                            toggle_rubix_charts
+                                        )
+                                    }
+                                    className="links-category-toggle"
+                                >
+                                    <div
+                                        className="links-category-toggle__inner-container"
+                                        style={{
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center"
+                                        }}
+                                    >
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-chart-bar links-category__icon" />
+                                        <p className="links-category-toggle__text">
                                             Rubix Charts
                                         </p>
-                                        <ul>
-                                            {is_rubix_charts_expanded ? (
-                                                <>
-                                                    <li className="links-category-list__item">
-                                                        <Link to="/charts/rubix/line">
-                                                            Line Series
-                                                        </Link>
-                                                    </li>
-                                                    <li className="links-category-list__item">
-                                                        <Link to="/charts/rubix/area">
-                                                            Area Series
-                                                        </Link>
-                                                    </li>
-                                                    <li className="links-category-list__item">
-                                                        <Link to="/charts/rubix/barcol">
-                                                            Bar + Column Series
-                                                        </Link>
-                                                    </li>
-                                                    <li className="links-category-list__item">
-                                                        <Link to="/charts/rubix/mixed">
-                                                            Mixed Series
-                                                        </Link>
-                                                    </li>
-                                                    <li className="links-category-list__item">
-                                                        <Link to="/charts/rubix/piedonut">
-                                                            Pie + Donut Series
-                                                        </Link>
-                                                    </li>
-                                                </>
-                                            ) : null}
-                                        </ul>
-                                    </li>
+                                    </div>
+                                    <i
+                                        className={`fas fa-chevron-left ${
+                                            is_rubix_charts_expanded
+                                                ? "fa-chevron-left--open"
+                                                : ""
+                                        } `}
+                                    />
+                                </div>
+                                <ul
+                                    className={`sub-links-container ${
+                                        is_rubix_charts_expanded
+                                            ? "sub-links-container--open"
+                                            : "sub-links-container--closed"
+                                    }`}
+                                    style={{ marginLeft: "20px" }}
+                                >
                                     <li className="links-category-list__item">
-                                        <Link to="/charts/chartsjs">
-                                            Charts.JS
+                                        <Link to="/charts/rubix/line">
+                                            <div className="sub-links-container__link-content">
+                                                <div className="sub-links-container__pointer" />
+                                                <i className="fas fa-clipboard-list links-category__icon" />
+                                                Line Series
+                                            </div>
                                         </Link>
                                     </li>
                                     <li className="links-category-list__item">
-                                        <Link to="/charts/c3js">C3.JS</Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/charts/morrisjs">
-                                            Morris.JS
+                                        <Link to="/charts/rubix/area">
+                                            <div className="sub-links-container__link-content">
+                                                <div className="sub-links-container__pointer" />
+                                                <i className="fas fa-clipboard-list links-category__icon" />
+                                                Area Series
+                                            </div>
                                         </Link>
                                     </li>
-                                </>
-                            ) : null}
+                                    <li className="links-category-list__item">
+                                        <Link to="/charts/rubix/barcol">
+                                            <div className="sub-links-container__link-content">
+                                                <div className="sub-links-container__pointer" />
+                                                <i className="fas fa-clipboard-list links-category__icon" />
+                                                Bar + Column Series
+                                            </div>
+                                        </Link>
+                                    </li>
+                                    <li className="links-category-list__item">
+                                        <Link to="/charts/rubix/mixed">
+                                            <div className="sub-links-container__link-content">
+                                                <div className="sub-links-container__pointer" />
+                                                <i className="fas fa-clipboard-list links-category__icon" />
+                                                Mixed Series
+                                            </div>
+                                        </Link>
+                                    </li>
+                                    <li className="links-category-list__item">
+                                        <Link to="/charts/rubix/piedonut">
+                                            <div className="sub-links-container__link-content">
+                                                <div className="sub-links-container__pointer" />
+                                                <i className="fas fa-clipboard-list links-category__icon" />
+                                                Pie + Donut Series
+                                            </div>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/charts/chartsjs">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Charts.JS
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/charts/c3js">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        C3.JS
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/charts/morrisjs">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Morris.JS
+                                    </div>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className="links-category-list__item">
