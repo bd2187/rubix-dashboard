@@ -342,117 +342,225 @@ function Links_panel() {
                         </Link>
                     </li>
                     <li className="links-category-list__item">
-                        <p
+                        <div
                             onClick={() =>
                                 expand_list(
                                     is_ui_elements_expanded,
                                     toggle_ui_elements
                                 )
                             }
+                            className="links-category-toggle"
                         >
-                            <i className="fas fa-toggle-on links-category__icon" />
-                            UI Elements
-                        </p>
-                        <ul>
-                            {is_ui_elements_expanded ? (
-                                <>
-                                    <li className="links-category-list__item">
-                                        <Link to="/ui-elements/buttons">
-                                            Inbox
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/ui-elements/dropdowns">
-                                            Mail
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/ui-elements/tabs-and-navs">
-                                            Tabs & Navs
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/ui-elements/sliders">
-                                            Sliders
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/ui-elements/knobs">
-                                            Knobs
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/ui-elements/modals">
-                                            Modals
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/ui-elements/messenger">
-                                            Messenger
-                                        </Link>
-                                    </li>
-                                </>
-                            ) : null}
+                            <div className="links-category-toggle__inner-container">
+                                <i className="fas fa-toggle-on links-category__icon" />
+                                <p className="links-category-toggle__text">
+                                    UI Elements
+                                </p>
+                            </div>
+                            <i
+                                className={`fas fa-chevron-left ${
+                                    is_ui_elements_expanded
+                                        ? "fa-chevron-left--open"
+                                        : ""
+                                } `}
+                            />
+                        </div>
+
+                        <ul
+                            className={`sub-links-container ${
+                                is_ui_elements_expanded
+                                    ? "sub-links-container--open"
+                                    : "sub-links-container--closed"
+                            }`}
+                        >
+                            <li className="links-category-list__item">
+                                <Link to="/ui-elements/buttons">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Inbox
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/ui-elements/dropdowns">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Mail
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/ui-elements/tabs-and-navs">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Tabs & Navs
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/ui-elements/sliders">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Sliders
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/ui-elements/knobs">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Knobs
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/ui-elements/modals">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Modals
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/ui-elements/messenger">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Messenger
+                                    </div>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className="links-category-list__item">
-                        <p
+                        <div
                             onClick={() =>
                                 expand_list(is_forms_expanded, toggle_forms)
                             }
+                            className="links-category-toggle"
                         >
-                            <i className="fas fa-align-left links-category__icon" />
-                            Forms
-                        </p>
-                        <ul>
-                            {is_forms_expanded ? (
-                                <>
-                                    <li className="links-category-list__item">
-                                        <Link to="/forms/controls">
-                                            Controls
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/forms/x-editables">
-                                            Mail
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/forms/wizard">Wizard</Link>
-                                    </li>
-                                </>
-                            ) : null}
+                            <div className="links-category-toggle__inner-container">
+                                <i className="fas fa-align-left links-category__icon" />
+                                <p className="links-category-toggle__text">
+                                    Forms
+                                </p>
+                            </div>
+                            <i
+                                className={`fas fa-chevron-left ${
+                                    is_forms_expanded
+                                        ? "fa-chevron-left--open"
+                                        : ""
+                                } `}
+                            />
+                        </div>
+
+                        <ul
+                            className={`sub-links-container ${
+                                is_forms_expanded
+                                    ? "sub-links-container--open"
+                                    : "sub-links-container--closed"
+                            }`}
+                        >
+                            <li className="links-category-list__item">
+                                <Link to="/forms/controls">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Controls
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/forms/x-editables">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Mail
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/forms/wizard">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Wizard
+                                    </div>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className="links-category-list__item">
-                        <p
+                        <div
                             onClick={() =>
                                 expand_list(is_tables_expanded, toggle_tables)
                             }
+                            className="links-category-toggle"
                         >
-                            <i className="fas fa-table links-category__icon" />
-                            Tables
-                        </p>
-                        <ul>
-                            {is_tables_expanded ? (
-                                <>
-                                    <li className="links-category-list__item">
-                                        <Link to="/tables/bootstrap-tables">
-                                            Bootstrap Tables
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/tables/datatables">
-                                            Datatables
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/tables/tablesaw">
-                                            Tablesaw
-                                        </Link>
-                                    </li>
-                                </>
-                            ) : null}
+                            <div className="links-category-toggle__inner-container">
+                                <i className="fas fa-table links-category__icon" />
+                                <p className="links-category-toggle__text">
+                                    Tables
+                                </p>
+                            </div>
+                            <i
+                                className={`fas fa-chevron-left ${
+                                    is_tables_expanded
+                                        ? "fa-chevron-left--open"
+                                        : ""
+                                } `}
+                            />
+                        </div>
+
+                        <ul
+                            className={`sub-links-container ${
+                                is_tables_expanded
+                                    ? "sub-links-container--open"
+                                    : "sub-links-container--closed"
+                            }`}
+                        >
+                            <li className="links-category-list__item">
+                                <Link to="/tables/bootstrap-tables">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Bootstrap Tables
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/tables/datatables">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Datatables
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className="links-category-list__item">
+                                <Link to="/tables/tablesaw">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Tablesaw
+                                    </div>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className="links-category-list__item">
@@ -468,32 +576,56 @@ function Links_panel() {
                         </Link>
                     </li>
                     <li className="links-category-list__item">
-                        <p
+                        <div
                             onClick={() =>
                                 expand_list(
                                     is_file_utilities_expanded,
                                     toggle_file_utilities
                                 )
                             }
+                            className="links-category-toggle"
                         >
-                            <i className="fas fa-folder-open links-category__icon" />
-                            File Utilities
-                        </p>
-                        <ul>
-                            {is_file_utilities_expanded ? (
-                                <>
-                                    <li className="links-category-list__item">
-                                        <Link to="/file-utilities/dropzone">
-                                            Bootstrap Tables
-                                        </Link>
-                                    </li>
-                                    <li className="links-category-list__item">
-                                        <Link to="/file-utilities/image-cropping">
-                                            Image Cropping
-                                        </Link>
-                                    </li>
-                                </>
-                            ) : null}
+                            <div className="links-category-toggle__inner-container">
+                                <i className="fas fa-folder-open links-category__icon" />
+                                <p className="links-category-toggle__text">
+                                    File Utilities
+                                </p>
+                            </div>
+                            <i
+                                className={`fas fa-chevron-left ${
+                                    is_file_utilities_expanded
+                                        ? "fa-chevron-left--open"
+                                        : ""
+                                } `}
+                            />
+                        </div>
+
+                        <ul
+                            className={`sub-links-container ${
+                                is_file_utilities_expanded
+                                    ? "sub-links-container--open"
+                                    : "sub-links-container--closed"
+                            }`}
+                        >
+                            <li className="links-category-list__item">
+                                <Link to="/file-utilities/dropzone">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Dropzone
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="links-category-list__item">
+                                <Link to="/file-utilities/image-cropping">
+                                    <div className="sub-links-container__link-content">
+                                        <div className="sub-links-container__pointer" />
+                                        <i className="fas fa-clipboard-list links-category__icon" />
+                                        Image Cropping
+                                    </div>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className="links-category-list__item">
