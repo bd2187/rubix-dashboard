@@ -3,13 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
 import Wrapper from "../components/Wrapper/Wrapper";
+import Mailbox from "../components/Mailbox/Mailbox";
 
 function Dashboard() {
     return <h1>Dashboard</h1>;
-}
-
-function Mailbox() {
-    return <h1>Mailbox</h1>;
 }
 
 function Gallery() {
