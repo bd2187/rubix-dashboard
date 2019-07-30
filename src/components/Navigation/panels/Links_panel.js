@@ -377,7 +377,7 @@ function Links_panel() {
                                 <Link to="/ui-elements/buttons">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-circle links-category__icon" />
+                                        <i className="fas fa-circle links-category__icon" />
                                         Buttons
                                     </div>
                                 </Link>
@@ -387,7 +387,7 @@ function Links_panel() {
                                 <Link to="/ui-elements/dropdowns">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-chevron-circle-down links-category__icon" />
+                                        <i className="fas fa-chevron-circle-down links-category__icon" />
                                         Dropdowns
                                     </div>
                                 </Link>
@@ -397,7 +397,7 @@ function Links_panel() {
                                 <Link to="/ui-elements/tabs-and-navs">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-location-arrow links-category__icon" />
+                                        <i className="fas fa-location-arrow links-category__icon" />
                                         Tabs & Navs
                                     </div>
                                 </Link>
@@ -407,7 +407,7 @@ function Links_panel() {
                                 <Link to="/ui-elements/sliders">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-sliders-h links-category__icon" />
+                                        <i className="fas fa-sliders-h links-category__icon" />
                                         Sliders
                                     </div>
                                 </Link>
@@ -417,7 +417,7 @@ function Links_panel() {
                                 <Link to="/ui-elements/knobs">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-circle-notch links-category__icon" />
+                                        <i className="fas fa-circle-notch links-category__icon" />
                                         Knobs
                                     </div>
                                 </Link>
@@ -427,7 +427,7 @@ function Links_panel() {
                                 <Link to="/ui-elements/modals">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-minus-square links-category__icon" />
+                                        <i className="fas fa-minus-square links-category__icon" />
                                         Modals
                                     </div>
                                 </Link>
@@ -437,7 +437,7 @@ function Links_panel() {
                                 <Link to="/ui-elements/messenger">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-sticky-note links-category__icon" />
+                                        <i className="fas fa-sticky-note links-category__icon" />
                                         Messenger
                                     </div>
                                 </Link>
@@ -477,7 +477,7 @@ function Links_panel() {
                                 <Link to="/forms/controls">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-gamepad links-category__icon" />
+                                        <i className="fas fa-gamepad links-category__icon" />
                                         Controls
                                     </div>
                                 </Link>
@@ -487,7 +487,7 @@ function Links_panel() {
                                 <Link to="/forms/x-editables">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-edit links-category__icon" />
+                                        <i className="fas fa-edit links-category__icon" />
                                         X-Editable
                                     </div>
                                 </Link>
@@ -497,7 +497,7 @@ function Links_panel() {
                                 <Link to="/forms/wizard">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-magic links-category__icon" />
+                                        <i className="fas fa-magic links-category__icon" />
                                         Wizard
                                     </div>
                                 </Link>
@@ -537,7 +537,7 @@ function Links_panel() {
                                 <Link to="/tables/bootstrap-tables">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-th-large links-category__icon" />
+                                        <i className="fas fa-th-large links-category__icon" />
                                         Bootstrap Tables
                                     </div>
                                 </Link>
@@ -547,7 +547,7 @@ function Links_panel() {
                                 <Link to="/tables/datatables">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-border-all links-category__icon" />
+                                        <i className="fas fa-border-all links-category__icon" />
                                         Datatables
                                     </div>
                                 </Link>
@@ -556,7 +556,7 @@ function Links_panel() {
                                 <Link to="/tables/tablesaw">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-balance-scale-right links-category__icon" />
+                                        <i className="fas fa-balance-scale-right links-category__icon" />
                                         Tablesaw
                                     </div>
                                 </Link>
@@ -611,7 +611,7 @@ function Links_panel() {
                                 <Link to="/file-utilities/dropzone">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-caret-square-down links-category__icon" />
+                                        <i className="fas fa-caret-square-down links-category__icon" />
                                         Dropzone
                                     </div>
                                 </Link>
@@ -621,7 +621,7 @@ function Links_panel() {
                                 <Link to="/file-utilities/image-cropping">
                                     <div className="sub-links-container__link-content">
                                         <div className="sub-links-container__pointer" />
-                                        <i class="fas fa-crop links-category__icon" />
+                                        <i className="fas fa-crop links-category__icon" />
                                         Image Cropping
                                     </div>
                                 </Link>
